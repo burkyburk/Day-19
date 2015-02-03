@@ -1,0 +1,21 @@
+{
+  "name": "classwork",
+  "version": "0.0.0",
+  "homepage": "https://github.com/burkyburk/Day-18",
+  "authors": [
+    "Jacob Burkhart <jacobdouglasburkhart@gmail.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "jquery": "~2.1.3"
+  }
+}
