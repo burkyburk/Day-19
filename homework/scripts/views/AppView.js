@@ -10,12 +10,10 @@ var AppView = Backbone.View.extend({
       'onListAdded'
     );
 
-    this.$firstName = $('#first-name');
+    
     this.$lastName = $('#last-name');
-    this.$age = $('#age');
     this.$submitButton = $('#submit-button');
-    this.$peopleList = $('#people-list');
-
+    this.$listbox = $('#list-box');
     this.people = new TodoListCollection();
 
     this.$submitButton.on('click', this.onSubmitButtonClick);
@@ -26,8 +24,7 @@ var AppView = Backbone.View.extend({
   },
 
   render: function() {
-    console.log(this);
-    console.log(this.newPerson.get('age'));
+    
    
   },
 
@@ -35,9 +32,9 @@ var AppView = Backbone.View.extend({
     console.log('onSubmitButtonClick');
 
     this.people.add({
-      firstName: this.$firstNamee,
+      
       lastName: this.$lastName.val(),
-      age: this.$age.val()
+      
     });
     console.log(this.people);
 
@@ -47,6 +44,6 @@ var AppView = Backbone.View.extend({
     console.log(ListModel.attributes);
     console.log(ListModel.getTodoList());
     var newPersonView = new PersonView({model: ListModel});
-    this.$peopleList.append(newPersonView.$el);
+    this.$listbox.append(newPersonView.$el);
   }
 });
