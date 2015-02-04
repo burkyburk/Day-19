@@ -46,4 +46,5 @@ var AppView = Backbone.View.extend({
     var newListView = new ListView({model: ListModel});
     this.$listbox.append(newListView.$el);
   }
+ 
 });
