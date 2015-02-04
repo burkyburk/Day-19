@@ -1,34 +1,54 @@
-<!doctype html>
-<html lang="">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    
-    
-    <title>day19!</title>
-    
+    <meta name="author" content="">
+
+    <title>To Do list #swag</title>
+
+   
   </head>
+
   <body>
-    <section id="app-view">
-    <input type="text" id="text-box">
+
+   <h1>To-Do List</h1>
+
+    <div class="container">
+      <div class="row">
+      <form>
+        <label>
+          Add to List:
+          <input type="text" id="last-name">
+        </label>
+        <button id="submit-button" type="button">Submit</button>
+      </form>
+      <ul class="list-group" id="people-list">
+      </ul>
+    </div>
+
+    </div><!-- /.container -->
+
+    <script type="text/html" id="person-view">
+    <li class="list-group-item">
       
-    </input>
+      <span class="last-name"><%= lastName %></span>
+      
+    </li>
+    </script>
 
-    </section>
-    <!-- Library Files -->
-    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
-    <script type="text/javascript" src="bower_components/backbone/backbone.js"></script>
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
+  <script type="text/javascript" src="bower_components/backbone/backbone.js"></script>
 
-    <!-- View files -->
-    <script type="text/javascript" src="scripts/views/AppView.js"></script>
+  <script type="text/javascript" src="scripts/models/ListModel.js"></script>
 
-    <script type="text/javascript" src="scripts/models/PersonModel.js"></script>
+  <script type="text/javascript" src="scripts/collections/TodoListCollection.js"></script>
 
-
-
-    <!--main file-->
-    <script type="text/javascript" src="scripts/main.js"></script>
+  <script type="text/javascript" src="scripts/views/PersonView.js"></script>
+  <script type="text/javascript" src="scripts/views/AppView.js"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>

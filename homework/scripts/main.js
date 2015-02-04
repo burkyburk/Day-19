@@ -1,6 +1,3 @@
-$(document).ready(function()	{
-	var myAppView = new AppView();	
-	var mySecondAppView
-	
-
+$(document).ready(function() {
+	var theRealAppView = new AppView();
 });

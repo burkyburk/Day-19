@@ -1,8 +1,10 @@
-var PersonModel = Backbone.Model.extend( {
+var ListModel = Backbone.Model.extend({
 	defaults: {
-		firstName: '',
 		lastName: '',
-		age: 30
+		
+	},
+	getFullName: function() {
+
+		return this.get('lastName');
 	}
 });
-
